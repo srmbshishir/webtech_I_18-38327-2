@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+        table,th,td{
+            border: 1px black solid;
+        }
+    </style>
+</head>
+<body style="margin: 10px;">
+    <h5><span style="color: red;">*</span> - Denotes Required Information </h5>
+    <p><span style="font-weight: bolder;">>  1 Donation</span>  > 2 Confirmation  > 3 Thank you!</p>
+    <h3 style="color: red; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Donor Information</h3>
+    <table style="margin-left: 80px; font-weight: bolder;">
+        <tr>
+            <td style="text-align: right;"><label>First Name <span style="color: red;">*</span></label></td>
+            <td><input type="text" name="fname"></td>
+        </tr>
+        <tr>
+            <td style="text-align: right;"><label>Last Name <span style="color: red;">*</span></label></td>
+            <td><input type="text" name="lname"></td>
+        </tr>
+        <tr>
+            <td style="text-align: right;"><label>Address1 <span style="color: red;">*</span></label></td>
+            <td><input type="text" name="add1"></td>
+        </tr>
+        <tr>
+            <td style="text-align: right;"><label>Address2</label></td>
+            <td><input type="text" name="add2"></td>
+        </tr>
+        <tr>
+            <td style="text-align: right;"><label>City <span style="color: red;">*</span></label></td>
+            <td><input type="text" name="City"></td>
+        </tr>
+        <tr>
+            <td style="text-align: right;"><label>State <span style="color: red;">*</span></label></td>
+            <td><select>
+                <option value="" disabled selected hidden>Select a State</option>
+                <option value="Dhaka">Dhaka</option>
+                <option value="Noakhali">Noakhali</option>
+                <option value="Barisal">Barisal</option>
+                <option value="Rajshahi">Rajshahi</option>
+              </select></td>
+        </tr>
+        <tr>
+            <td style="text-align: right;"><label>Zip code<span style="color: red;">*</span></label></td>
+            <td><input type="text" name="zip"></td>
+        </tr>
+        <tr>
+            <td style="text-align: right;"><label>Country <span style="color: red;">*</span></label></td>
+            <td><select>
+                <option value="" disabled selected hidden>Select a Country</option>
+                <option value="bd">Bangladesh</option>
+                <option value="Ind">India</option>
+              </select></td>
+        </tr>
+        <tr>
+            <td style="text-align: right;"><label>Phone</label></td>
+            <td><input type="text" name="phn"></td>
+        </tr>
+        <tr>
+            <td style="text-align: right;"><label>Fax</label></td>
+            <td><input type="text" name="Fax"></td>
+        </tr>
+        <tr>
+            <td style="text-align: right;"><label>E-mail<span style="color: red;">*</span></label></td>
+            <td><input type="text" name="e-mail"></td>
+        </tr>
+        <tr>
+            <td style="text-align: right;"><label>Donation Amount<span style="color: red;">*</span></label></td>
+            <td colspan="2">
+                <input type="radio" name="Amount" value="none">
+                <label for="none">None</label>
+                <input type="radio" name="Amount" value="100">
+                <label for="100">100$</label>
+                <input type="radio" name="Amount" value="200">
+                <label for="200">200$</label>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-weight: lighter; text-align: right;font-size: small;">(Check a button or type in your<br> Amount)</td>
+            <td style="width: 20px;text-align: center;"><p>Other Amount $</p></td>
+            <td><input type="text" name="Other"></td>
+        </tr>
+        <tr>
+            <td style="text-align: right;"><label>Recurring Donation</label></td>
+            <td colspan="2" style="font-weight: lighter;"><input type="checkbox" name="phn">I am interested in giving on a regular basis</td>
+        </tr>
+        <tr>
+            <td style="font-weight: lighter; text-align: right; font-size: small;">(Check if yes)</td>
+        </tr>
+    </table>
+    <h3 style="color: red; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Honourium and Memorial Donation
+    Information</h3>
+    <table style="margin-left: 80px; font-weight: bolder;">
+        <tr>
+            <td style="text-align: right;"><label>I would like to make this<br> decision</label></td>
+            <td style="font-weight: lighter;">
+                <input type="radio" id="tohonor" name="decision" value="honor">
+                <label for="tohonor">to honor</label><br>
+                <input type="radio" id="inmem" name="decision" value="memory">
+                <label for="inmem">in memory of</label>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: right;"><label>Name</label></td>
+            <td><input type="text" name="name"></td>
+        </tr>
+        <tr>
+            <td style="text-align: right;"><label>Acknowledge Donation to</label></td>
+            <td><input type="text" name="Acknowledge"></td>
+        </tr>
+        <tr>
+            <td style="text-align: right;"><label>City</label></td>
+            <td><input type="text" name="city to"></td>
+        </tr>
+        <tr>
+            <td style="text-align: right;"><label>State<label></td>
+            <td><select>
+                <option value="" disabled selected hidden>Select a State</option>
+                <option value="Dhaka">Dhaka</option>
+                <option value="Noakhali">Noakhali</option>
+                <option value="Barisal">Barisal</option>
+                <option value="Rajshahi">Rajshahi</option>
+              </select></td>
+        </tr>
+        <tr>
+            <td style="text-align: right;"><label>Zip code</label></td>
+            <td><input type="text" name="zip"></td>
+        </tr>
+    </table>
+    <h3 style="color: red; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Additional
+        Information</h3>
+    <p>Please enter your name,company or organisation as you would like to appear in our publications:</p>
+    <p style="font-weight: bolder;margin-left: 220px;">Name<input type="text" name="namef"></p>
+    <p><input type="checkbox">  I would like my gift as anonymous</p>
+    <p><input type="checkbox">  My employer offers a gift</p>
+    <p><input type="checkbox">  Save this cost and dont mail thank you</p>
+    
+    <table style="margin-left: 10px; font-weight: bolder;">
+        <tr>
+            <td colspan="3" style="text-align: right;"><label>Comments</label><br><p style="font-weight: lighter;">(Please type any questions or feedback <br>here)</p></td>
+            <td><textarea id="w3review" name="w3review" rows="5" cols="50"></textarea></td>
+        </tr>
+        <tr>
+            <td rowspan="4" colspan="3" style="text-align: right;">How we may contact you</td>
+            <td style="font-weight: lighter;" rowspan="4"><input type="checkbox">E-mail<br>
+            <input type="checkbox">Postal mail<br>
+            <input type="checkbox">Telephone<br>
+            <input type="checkbox">Fax<br>
+            </td>
+        </tr>
+    </table>
+    <p style="color: gray;">I would like to recieve notifications on any newsletters or anything</p>
+    <p style="margin-left: 270px;"><input type="checkbox">E-mail</p>
+    <p style="margin-left: 270px;"><input type="checkbox">Postal mail</p>
+    <p><input type="checkbox">I would like Information about volunteering with the team</p>
+    <button style="margin-left: 200px; border-radius: 5px;" type="reset">Reset</button>
+    <button style="margin-left: 15px; border-radius: 5px;" type="submit">Submit</button><br>
+
+    <p><i class="fa fa-lock" style="font-size:24px"></i>Donate online with confidence. you are on a secure server</p>
+    <p>If you have any problem or questions please contact <a href="aiub.edu">support</a></p>
+   
+</body>
+</html>
