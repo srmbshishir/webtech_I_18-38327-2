@@ -42,6 +42,10 @@
       // If result matched $myusername and $mypassword, table row must be 1 row
 		
       if($count == 1) {
+               if(isset($_POST['remember'])){
+                  setcookie('email',$_POST['email'],time()+60*60*7);
+                  setcookie('password',$_POST['password'],time()+60*60*7);
+               }
          $_SESSION['login_user'] = $row['name'];
          $_SESSION['id']=$row['id'];
          $_SESSION['email']=$myusername;
@@ -70,16 +74,16 @@
                     <legend>Login</legend>
                     <tr>
                         <td><label for="email">Login Email : </label></td>
-                        <td><input type="text" id="email" name="email" onkeyup="validateEmail()" >
+                        <td><input type="text" id="email" name="email" value="<?php if(isset($_COOKIE['email'])){ echo $_COOKIE['email']; }?>" onkeyup="validateEmail()" >
                         <span>*</span><p id="emailError"></td>
                     </tr>
                     <td><label for="password">Password : </label></td>
-                    <td><input type="password" id="password" name="password" onkeyup="validatePassword()" >
+                    <td><input type="password" id="password" name="password" value="<?php if(isset($_COOKIE['password'])){ echo $_COOKIE['password']; }?>" onkeyup="validatePassword()" >
                     <span>*</span><p id="passError"></td>
                     </tr>
                     <tr>
-                    <td><input type="checkbox" name="forget" value="forget">                
-                    <label for="forget">Remember me</label><br></td>
+                    <td><input type="checkbox" id="remember" name="remember" value="1">Remember Me 
+                     <br></td>
                     <td><input type="submit" value="Submit" onclick="validate()">
                     <a href="https://www.w3schools.com">Forget password?</a></td>
                     </tr>
